@@ -2,6 +2,9 @@
 // Include common configurations and functions
 require_once __DIR__ . '/app.php';
 
+// Ensure $theme_path is accessible in the route definitions
+global $theme_path;
+
 // Define application routes
 $router->add('GET', '/', function () use ($theme_path) {
     include $theme_path . 'home.php';
